@@ -1,0 +1,60 @@
+/* default styles */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Log in styles */
+.login-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    
+}
+.login-input{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+.text-login{
+    color: rgb(0, 0, 65);
+    font-size: 30pt;
+    margin-bottom: 20px;
+}
+.email-input, .password-input{
+    border: 1px solid rgb(0, 0, 65);
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+    width: 250px;
+    box-shadow: 0px 0px 3px black;
+    border-style: none;
+}
+
+.submit-button{
+    height: 40px;
+    width: 200px;
+    background-color: rgb(0, 0, 65);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 20px;
+}
+.submit-button:hover{
+    background-color: rgb(0, 0, 121);
+}
+.recuperacion-pswd{
+    text-decoration: none;
+    color: rgb(0, 0, 65);
+}
+.image-container{
+    float: right;
+}
