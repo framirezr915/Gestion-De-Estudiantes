@@ -9,25 +9,42 @@
 
 /* default styles */
 *{
+    overflow: hidden;
     font-family: 'Myriad Pro Regular';
     margin: 0px;
     padding: 0px;
 }
+/* Regresar styles */
+a{
+    position: absolute;
+    display: flex;
+    margin: 20px;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 65);
+
+}
+a:hover{
+    transition: 0.3s;
+    background-color: rgb(0, 0, 121); 
+}
+
+
 
 /* Recovery Form */
 .recov-pass-container{
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-
-
+    margin-right: 80px;
 }   
-.wave{
-    position: absolute;
-    bottom: -30px;
-}
+
 .recov-pass{
     position: absolute;
     display: flex;
@@ -39,6 +56,7 @@
     height: 350px;
     width: 500px;
     box-shadow: 0px 0px 5px black;
+    margin-bottom: 100px;
 }
 .recov-pass-text{
     color: rgb(0, 0, 65);
@@ -71,5 +89,10 @@
     margin: 20px;
 }
 .recov-pass-button:hover{
+    transition: 0.3s;
     background-color: rgb(0, 0, 121);
+}
+.wave{
+    position: absolute;
+    bottom: -30px;
 }

@@ -11,13 +11,20 @@
     <!-- Login Container info -->
 
     <div class="login-container">
-        <div class="login-input">
-            <h2 class="text-login">Log In</h2>
-            <input type="email" name="email" id="email" class="email-input" placeholder="Correo electrónico">
-            <input type="password" name="password" id="password" class="password-input" placeholder="Contraseña">
-            <button class="submit-button" type="submit">Ingresar</button>
-            <a href="../html/recuperacion-passwd.html" target="_parent" rel="noopener noreferrer" class="recuperacion-pswd">¿Se te olvidó la contraseña?</a>
-        </div>
+        <form action="">
+            <div class="login-input">
+                <img src="../multimedia/logo-blue.svg" alt="Gestion-Estudiantes" class="logo-blue">
+                <h2 class="text-login">Log In</h2>
+                <input type="email" name="email" id="email" class="email-input" placeholder="Correo electrónico">
+                <input type="password" name="password" id="password" class="password-input" placeholder="Contraseña">
+
+                <button class="submit-button" type="submit" id="submit-button">
+                    <a href="../html/Pantalla-Estudiante.html" target="_self">Ingresar</a>
+                </button>
+
+                <a href="../html/recuperacion-passwd.html" target="_parent" rel="noopener noreferrer" class="recuperacion-pswd">¿Se te olvidó la contraseña?</a>
+            </div>
+        </form>
     </div>
 
     <!-- End of Login Container info -->
