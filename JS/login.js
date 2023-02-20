@@ -25,9 +25,14 @@ signInWithEmailAndPassword(auth, email, password)
 .then((userCredential) => {
 // Signed in 
 const user = userCredential.user;
-location.replace("../html/Pantalla-Estudiante.html")
-alert("Ha ingresado correctamente")
-// ...
+if (email.includes("std")){
+  location.replace("../html/Pantalla-Estudiante.html")
+  alert("Ha ingregado correctamente como estudiante.");
+} else if(email.includes("psf")){
+  location.replace("../html/Pantalla-Profesor.html")
+  alert("Ha ingregado correctamente como profesor.");
+}
+
 })
 .catch((error) => {
 const errorCode = error.code;
