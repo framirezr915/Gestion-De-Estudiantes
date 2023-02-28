@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/ContenidoProfesor.js"></script>
     <title>Gestion De Estudiantes</title>
 </head>
 <body>
@@ -13,38 +14,46 @@
         <div class="logo">
             <img src="../multimedia/logo-white.svg" alt="" class="logo">
         </div>
-        <a class="perfil" href="">
-            <img src="../multimedia/profile.svg" alt="">
-            <p>Perfil Profesor</p>
+        <a class="grupos" href="">
+            <img src="../multimedia/grupo.svg" alt="">
+            <p>Grupos</p>
         </a>
 
-        <a class="log-out" href="../html/login.html">
-            <img src="../multimedia/log-out.svg" alt="">
-            <p>Cerrar Sesión</p>
+        <a class="asistencia" href="../html/login.html">
+            <img src="../multimedia/asistencia.svg" alt="">
+            <p>Asistencia</p>
         </a>
+
+        
+
+        <div class="back-btn-container">
+            <a href="../html/Pantalla-Profesor.html" class="Back-btn">
+                <img src="../multimedia/backarrow.svg" alt="back-arrow">
+                <p>Regresar</p>
+            </a>
+        </div>
+        
      </div>
      
      <div class="header-cursos">
-        <h2>Cursos Activos</h2>
+        <h2>Nombre de Curso</h2>
         <hr>
      </div>
 
      <div class="header-content">
-        
-        <button class="content-btn">Contenido</button>
-        <button class="content-btn">Libro de Trabajos</button>
-        <button class="content-btn">Discusiones</button>
+        <button class="btn-content" id="content-btn">Contenido</button>
+        <button class="btn-content" id="Lt-btn">Libro de Trabajos</button>
+        <button class="btn-content" id="Discusiones-btn">Discusiones</button>
     </div>
 
-        <div class="contenido">
-            
+    <div class="contenido-container">
+        <div class="contenido"></div>
 
-        </div>
-        <div class="Libro de Trabajos">
+        <div class="Libro de Trabajos"></div>
 
-        </div>
         <div class="Discusiones">
-
+    </div>
+       
         </div>
 
 
