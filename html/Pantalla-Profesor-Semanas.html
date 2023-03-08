@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="../css/Pantalla-Profesor-Semanas.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="../css/Pantalla-Profesor-Semanas.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../JS/ContenidoProfesor.js"></script>
     <title>Gestion De Estudiantes</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="logo">
+        <img src="../multimedia/logo-white.svg" alt="" class="logo" />
+      </div>
+      <a class="grupos" href="">
+        <img src="../multimedia/grupo.svg" alt="" />
+        <p>Grupos</p>
+      </a>
 
-     <div class="side-bar">
-        <div class="logo">
-            <img src="../multimedia/logo-white.svg" alt="" class="logo">
-        </div>
-        <a class="grupos" href="">
-            <img src="../multimedia/grupo.svg" alt="">
-            <p>Grupos</p>
+      <a class="asistencia" href="../html/login.html">
+        <img src="../multimedia/asistencia.svg" alt="" />
+        <p>Asistencia</p>
+      </a>
+
+      <div class="back-btn-container">
+        <a href="../html/Pantalla-Profesor.html" class="Back-btn">
+          <img src="../multimedia/backarrow.svg" alt="back-arrow" />
+          <p>Regresar</p>
         </a>
+      </div>
+    </div>
 
-        <a class="asistencia" href="../html/login.html">
-            <img src="../multimedia/asistencia.svg" alt="">
-            <p>Asistencia</p>
-        </a>
+    <div class="header-cursos">
+      <h2>Nombre de Curso</h2>
+      <hr />
+    </div>
 
-        
-
-        <div class="back-btn-container">
-            <a href="../html/Pantalla-Profesor.html" class="Back-btn">
-                <img src="../multimedia/backarrow.svg" alt="back-arrow">
-                <p>Regresar</p>
-            </a>
-        </div>
-        
-     </div>
-     
-     <div class="header-cursos">
-        <h2>Nombre de Curso</h2>
-        <hr>
-     </div>
-
-     <div class="header-content">
-        <button class="btn-content" id="content-btn">Contenido</button>
-        <button class="btn-content" id="Lt-btn">Libro de Trabajos</button>
-        <button class="btn-content" id="Discusiones-btn">Discusiones</button>
+    <div class="header-content">
+      <button class="btn-content" id="content-btn">Contenido</button>
+      <button class="btn-content" id="Lt-btn">Libro de Trabajos</button>
+      <button class="btn-content" id="Discusiones-btn">Discusiones</button>
     </div>
 
     <div class="contenido-container">
-        <div class="contenido"></div>
 
-        <div class="Libro de Trabajos"></div>
+      <div class="contenido">
 
-        <div class="Discusiones">
-    </div>
-       
+        <div class="subir-archivo">
+          <h2>Arrastra y suelta las imagenes</h2>
+          <span>O</span>
+          <button>Selecciona tus archivos</button>
+          <input type="file" name="" id="input-file" hidden multiple />
         </div>
+      </div>
 
+      <div id="preview"></div>
 
+      <div class="Libro de Trabajos"></div>
 
-    
-
-</body>
+      <div class="Discusiones"></div>
+      <script type="text/javascript" src="../JS/archivos.js"></script>
+    </div>
+  </body>
 </html>
