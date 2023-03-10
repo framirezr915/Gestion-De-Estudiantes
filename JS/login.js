@@ -20,14 +20,17 @@ submitButton.addEventListener('click', (e) => {
 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-
-signInWithEmailAndPassword(auth, email, password)
+    
+    
+signInWithEmailAndPassword(auth, email, password,)
 .then((userCredential) => {
 // Signed in 
 const user = userCredential.user;
+sessionStorage.setItem("status", true);
 if (email.includes("std")){
   location.replace("../html/Pantalla-Estudiante.html")
   alert("Ha ingregado correctamente como estudiante.");
+  
 } else if(email.includes("psf")){
   location.replace("../html/Pantalla-Profesor.html")
   alert("Ha ingregado correctamente como profesor.");
