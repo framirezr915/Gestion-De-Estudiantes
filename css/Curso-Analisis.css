@@ -1,0 +1,125 @@
+/* Fonts */
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Regular'), url('../Fonts/MYRIADPRO-REGULAR.woff') format('woff');
+    }
+/* Default styles */
+html{
+    background-color: #ffffff;
+}
+*{
+    overflow: hidden;
+    font-family: 'Myriad Pro Regular';
+    margin: 0px;
+    padding: 0px;
+    
+}
+/* Side-bar styles */
+.side-bar{
+    display: flex;
+    flex-flow: column;
+    position: sticky;
+    justify-items: center;
+    background-color: rgb(0, 0, 65);
+    height: 100vh;
+    width: 150px;
+    margin-right: 20px;
+    float: left;
+}
+.logo{
+    margin-bottom: 30px;
+}
+.log-out{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(0, 0, 65);
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white;
+
+}
+
+.log-out img{
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Cursos-Container Styles */
+
+.cursos-container{
+    display: flex;
+    flex-direction: row wrap;
+    border-radius: 10px;
+    margin-right: 20px;
+
+}
+
+/* Header-cursos styles */
+.header-cursos{
+    margin: 30px;
+
+}
+.header-cursos h2, hr{
+    color: rgb(0, 0, 65);
+    font-size: 30pt;
+    margin-bottom: 20px;
+}
+
+.header-cursos h3 {
+    align-items: first baseline;
+    color: rgb(0, 0, 65);
+    font-size: 300pt;
+    margin-bottom: 20px;
+
+}
+
+/* Animaciones minimalistas*/
+.header-cursos h2{
+    -webkit-animation:tracking-in-expand .7s 
+    cubic-bezier(.215,.61,.355,1.000) both;
+    animation:tracking-in-expand .7s cubic-bezier
+    (.215,.61,.355,1.000) both
+}
+.logo{
+	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+/* Keyframes */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+ @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+.header-cursos hr {
+    height: 3px;
+    background-color: rgb(0, 0, 65);
+    border-radius: 3px;
+}
