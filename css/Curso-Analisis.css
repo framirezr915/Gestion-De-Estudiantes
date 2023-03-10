@@ -31,7 +31,7 @@ html{
 .logo{
     margin-bottom: 30px;
 }
-.asistencia, .grupos{
+.log-out{
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -42,147 +42,21 @@ html{
     color: white;
 
 }
-.asistencia img{
+
+.log-out img{
     height: 30px;
     margin-right: 10px;
 }
-.grupos img{
-    height: 30px;
-    margin-right: 10px;
-}
-.asistencia:hover, .grupos:hover{
-    transition: 0.3s;
-    background-color: #144272;
 
-}
-.Back-btn{
+/* Cursos-Container Styles */
+
+.cursos-container{
     display: flex;
-    background-color: rgb(0, 0, 65);
-    height: 50px;
-    width: 150px;
-    justify-content: flex-start;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    margin-top: 350px;
-}
-.Back-btn img{
-    height: 30px;
-    margin: 10px;
-}
-.Back-btn:hover{
-    transition: 0.3s;
-    background-color: #144272;
-    
-}
-
-/* Contenido styles */
-.header-content{
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-    justify-content: space-evenly;
-}
-
-.contenido-container{
-    display: flex;
-    margin: 50px;
-    border: 1px solid black;
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-   
-    
-}
-.subir-archivo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.contenido{
-    border: 5px dashed #ddd;
-    height: 500px;
-    width: 700px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contenido.active{
-    background-color: #b8d5fe;
-    color: black;
-    border: 2px dashed #618ac9;
-}
-
-.subir-archivo h2{
-    font-size: 30px;
-    color: black;
-    font-weight: 500;
-}
-.subir-archivo span{
-    font-size: 25px;
-    color: black;
-    font-weight: 500;
-
-}
-.subir-archivo button{
-    padding: 10px 25px;
-    font-size: 20px;
-    border: 0;
-    outline: none;
-    background-color: rgb(0, 0, 65);
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 20px;
-}
-.file-container{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border: solid 1px #ddd;
-}
-
-#preview{
-    margin-top: 10px;
-}
-
-.status-text{
-    padding: 0 10px;
-}
-
-.success{
-    color: green;
-}
-.failure{
-    color: red;
-}
-
-.btn-content{
-    font-family: "Myriad Pro Regular";
-    border: none;
+    flex-direction: row wrap;
     border-radius: 10px;
-    height: 50px;
-    width: 150px;
-    background-color: rgb(0, 0, 65);
-    color: white;
+    margin-right: 20px;
+
 }
-
-.btn-content:hover{
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #144272;
-    
-}
-.btn-content:focus{
-    background-color: #144272;
-    
-}
-
-
-
 
 /* Header-cursos styles */
 .header-cursos{
@@ -195,8 +69,15 @@ html{
     margin-bottom: 20px;
 }
 
+.header-cursos h3 {
+    align-items: first baseline;
+    color: rgb(0, 0, 65);
+    font-size: 300pt;
+    margin-bottom: 20px;
 
-/* Animaciones */
+}
+
+/* Animaciones minimalistas*/
 .header-cursos h2{
     -webkit-animation:tracking-in-expand .7s 
     cubic-bezier(.215,.61,.355,1.000) both;
@@ -207,6 +88,7 @@ html{
 	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+
 
 /* Keyframes */
  @-webkit-keyframes text-focus-in {
