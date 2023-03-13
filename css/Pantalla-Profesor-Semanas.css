@@ -87,12 +87,23 @@ html{
 .contenido-container{
     display: flex;
     margin: 50px;
-    border: 1px solid black;
     height: 600px;
     justify-content: center;
     align-items: center;
+
    
     
+}
+.embed-container{
+    border: 5px dashed #ddd;
+    height: 500px;
+    width: 400px;
+    text-align: center;
+    margin: 120px;
+}
+.embedPdf{
+    height: 500px;
+    width: 400px;
 }
 .subir-archivo{
     display: flex;
@@ -108,6 +119,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .contenido.active{
     background-color: #b8d5fe;
@@ -143,21 +155,6 @@ html{
     gap: 10px;
     padding: 10px;
     border: solid 1px #ddd;
-}
-
-#preview{
-    margin-top: 10px;
-}
-
-.status-text{
-    padding: 0 10px;
-}
-
-.success{
-    color: green;
-}
-.failure{
-    color: red;
 }
 
 .btn-content{
