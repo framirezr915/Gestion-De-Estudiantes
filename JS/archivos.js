@@ -13,6 +13,11 @@ button.addEventListener('click', e => {
 
 
 input.addEventListener('change', function(){
+    let pdfFile = document.querySelector('#input-file').files[0];
+    let pdfFileUrl = URL.createObjectURL(pdfFile);
+    
+    document.querySelector("#vista-previa").setAttribute('src', pdfFileUrl);
+
     files = this.files[0];
     dropArea.classList.add("active");
     showFiles();
@@ -34,6 +39,10 @@ dropArea.addEventListener("dragleave", (e) => {
 })
 
 dropArea.addEventListener("drop", (e) => {
+    let pdfFile = document.querySelector('#input-file').files[0];
+    let pdfFileUrl = URL.createObjectURL(pdfFile);
+    
+    document.querySelector("#vista-previa").setAttribute('src', pdfFileUrl);
     e.preventDefault();
     files = e.dataTransfer.files[0];
     showFiles();
@@ -48,7 +57,7 @@ function showFiles(){
         fileReader.onload = () => {
             let fileUrl = fileReader.result;
             console.log(fileUrl);
-            let imgTag = `<img src="${fileUrl}" alt=">`;
+            let imgTag = `<img src="${fileUrl}" alt="">`;
             dropArea.innerHTML = imgTag;
         }
     fileReader.readAsDataURL(files);
