@@ -68,6 +68,7 @@ html{
 .curso1, .curso2, .curso3, .curso4, .curso5{
 
     background-color: #182747;
+    color: white;
     margin: 30px;
     display: flex;
     height: 200px;

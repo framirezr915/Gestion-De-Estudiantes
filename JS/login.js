@@ -26,13 +26,15 @@ signInWithEmailAndPassword(auth, email, password,)
 .then((userCredential) => {
 // Signed in 
 const user = userCredential.user;
-sessionStorage.setItem("status", true);
+
 if (email.includes("std")){
   location.replace("../html/Pantalla-Estudiante.html")
+  sessionStorage.setItem("status", email.replace("@std.com",""));
   alert("Ha ingregado correctamente como estudiante.");
   
 } else if(email.includes("psf")){
   location.replace("../html/Pantalla-Profesor.html")
+  sessionStorage.setItem("status", email.replace("@psf.com",""));
   alert("Ha ingregado correctamente como profesor.");
 }
 

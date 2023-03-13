@@ -21,8 +21,8 @@ function findData(){
     const dbref = ref(db);
 
     var usuario = sessionStorage.getItem("status")
-    for(let i= 1; i<5; i++){
-        get(child(dbref, "Estudiantes/" + (usuario+"/") + "Cursos/"+i))
+    for(let i= 5; i<8; i++){
+        get(child(dbref, "Profesores/" + (usuario+"/") + "Cursos/"+i))
     .then((snapshot)=>{
         if(snapshot.exists()){
 
