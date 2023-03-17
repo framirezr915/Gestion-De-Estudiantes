@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/Foro-Discusiones-Profesor.css">
+    <title>Gestion de Estudiantes</title>
+
+    <script type="module" src="../JS/discusion.js"></script>
+    <script src="gestion-de-estudiantes.firebaseapp.com"></script>
+    <script src="https://gestion-de-estudiantes-default-rtdb.firebaseio.com"></script>
+
+</head>
+<body>
+    <div class="side-bar">
+        <div class="logo">
+          <img src="../multimedia/logo-white.svg" alt="" class="logo" />
+        </div>
+        <a class="grupos" href="">
+          <img src="../multimedia/grupo.svg" alt="" />
+          <p>Grupos</p>
+        </a>
+  
+        <a class="asistencia" href="../html/login.html">
+          <img src="../multimedia/asistencia.svg" alt="" />
+          <p>Asistencia</p>
+        </a>
+  
+        <div class="back-btn-container">
+          <a href="../html/Pantalla-Profesor.html" class="Back-btn">
+            <img src="../multimedia/backarrow.svg" alt="back-arrow" />
+            <p>Regresar</p>
+          </a>
+        </div>
+      </div>
+  
+      <div class="header-cursos">
+        <h2>Nombre de Curso</h2>
+        <hr />
+      </div>
+  
+      <div class="header-content">
+        <button class="btn-content" id="content-btn">Contenido</button>
+        <button class="btn-content" id="Discusiones-btn">Discusiones</button>
+      </div>
+
+
+      <div class="contenido">
+
+      <div class="Discusiones"></div>
+      <main>
+		<ul id="comentarios">
+			<!-- Los comentarios se generarán dinámicamente con JavaScript -->
+		</ul>
+		
+		<div class="formulario">
+			<h2>Foro de Discusión</h2>
+			<form>
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+				<label for="mensaje">Mensaje:</label>
+				<textarea id="mensaje" name="mensaje" required></textarea>
+				<button type="submit">Enviar</button>
+			</form>
+      <!-- Lista de comentarios -->
+    <ul id="comentarios"></ul>
+		</div>
+    </div>
+</body>
+</html>
