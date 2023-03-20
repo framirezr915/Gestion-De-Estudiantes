@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import { getDatabase, set, ref, push, child, onValue  } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import { getDatabase, set, ref, push, child, onValue } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
 const firebaseConfig = {
 
