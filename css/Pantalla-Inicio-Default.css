@@ -75,7 +75,10 @@ html{
     width: 300px;
     border-radius: 20px;
     transition: transform .2s;
-   
+    align-items: center;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;
 }
 
 
