@@ -18,6 +18,7 @@ var pause = document.getElementsByClassName('pause')[0];
 var resume = document.getElementsByClassName('resume')[0];
 var cancel = document.getElementsByClassName('cancel')[0];
 
+
 document.getElementById(("Nombre")).innerHTML = sessionStorage.getItem("Nombre");
 // create function for select a file
 upload.onclick = function () {
@@ -85,10 +86,11 @@ hiddenBtn.onchange = function () {
             hiddenBtn.value = null;
         }
     )
-}
+    }
 
 DiscusionesBtn.addEventListener ('click', (e) => {
 
 location.replace("../html/Foro-Discusiones-Profesor.html")
 });
+
 
