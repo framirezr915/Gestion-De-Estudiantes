@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase();
  
-function findData(){
+
     const dbref = ref(db);
 
     var usuario = sessionStorage.getItem("status")
@@ -27,6 +27,7 @@ function findData(){
         if(snapshot.exists()){
 
 document.getElementById(("btnCurso"+i)).innerHTML = (snapshot.val().Nombre);
+sessionStorage.setItem(("btnCurso"+i),snapshot.val().Nombre);
         }else{
             console.log("No data found");
         }
@@ -40,7 +41,21 @@ document.getElementById(("btnCurso"+i)).innerHTML = (snapshot.val().Nombre);
 
 
 
+btnCurso5.addEventListener ('click', (e) => {
+    sessionStorage.setItem("Nombre",sessionStorage.getItem("btnCurso5"));
+    location.replace("../html/Pantalla-Profesor-Semanas.html")
+    
+    
+});
 
-};
+btnCurso6.addEventListener ('click', (e) => {
+    sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso6"));
+    location.replace("../html/Pantalla-Profesor-Semanas.html")
+    
+});
 
-findData();
+btnCurso7.addEventListener ('click', (e) => {
+    sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso7"));
+    location.replace("../html/Pantalla-Profesor-Semanas.html")
+    
+});
