@@ -40,16 +40,20 @@ html{
     margin-bottom: 20px;
     padding: 20px;
     color: white;
+    border-style: none;
 
 }
 .perfil img{
     height: 30px;
     margin-right: 10px;
 }
-.log-out img{
-    height: 30px;
-    margin-right: 10px;
+
+.log-out{
+  display: flex;
+  justify-content: center;
+  margin-top: 600px;
 }
+
 .perfil:hover, .log-out:hover{
     transition: 0.3s;
     background-color: #144272;
@@ -59,6 +63,7 @@ html{
     list-style: none;
     padding: 0;
     margin: 0;
+    
   }
   
   .estudiantes li {
@@ -76,10 +81,11 @@ html{
     background-color: #f9f9f9;
     cursor: pointer;
   }
-
-
-
-
+.estudiantes h4{
+    color: #144272;
+    font-size: 20pt;
+    margin-bottom: 50px;
+}
 
 
 /* Header-cursos styles */
