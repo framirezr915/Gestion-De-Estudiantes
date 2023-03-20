@@ -9,6 +9,11 @@ const firebaseConfig = {
     appId: "1:195992130911:web:d883094ec0cd5d115612ea",
     measurementId: "G-MZ74HG8FX8"
   };
+contentBtn.addEventListener ('click', (e) => {
+
+    location.replace("../html/Pantalla-Profesor-Semanas.html")
+    });
+
 
 // Inicializamos la aplicación de Firebase
 firebase.initializeApp(firebaseConfig);
@@ -66,3 +71,4 @@ formulario.addEventListener('submit', e => {
 	agregarComentario(nombre, mensaje);
 	formulario.reset();
 });
+

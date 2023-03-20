@@ -30,12 +30,12 @@ const user = userCredential.user;
 if (email.includes("std")){
   location.replace("../html/Pantalla-Estudiante.html")
   sessionStorage.setItem("status", email.replace("@std.com",""));
-  alert("Ha ingregado correctamente como estudiante.");
+  alert("Ha ingresado correctamente como estudiante.");
   
 } else if(email.includes("psf")){
   location.replace("../html/Pantalla-Profesor.html")
   sessionStorage.setItem("status", email.replace("@psf.com",""));
-  alert("Ha ingregado correctamente como profesor.");
+  alert("Ha ingresado correctamente como profesor.");
 }
 
 })

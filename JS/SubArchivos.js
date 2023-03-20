@@ -85,3 +85,9 @@ hiddenBtn.onchange = function () {
         }
     )
 }
+
+DiscusionesBtn.addEventListener ('click', (e) => {
+
+location.replace("../html/Foro-Discusiones-Profesor.html")
+});
+
