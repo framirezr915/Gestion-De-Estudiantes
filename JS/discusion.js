@@ -9,6 +9,7 @@ const firebaseConfig = {
     appId: "1:195992130911:web:d883094ec0cd5d115612ea",
     measurementId: "G-MZ74HG8FX8"
   };
+document.getElementById(("Nombre2")).innerHTML = sessionStorage.getItem("Nombre");
 contentBtn.addEventListener ('click', (e) => {
 
     location.replace("../html/Pantalla-Profesor-Semanas.html")
