@@ -2,7 +2,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
 import { getDatabase, set, ref, push, child, onValue  } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
 const firebaseConfig = {
-    // Aquí van tus credenciales de Firebase
+
+    apiKey: "AIzaSyAiFsGQLvAyhF4LbL-KkhYu-KHSIEAah2k",
+    databaseURL: "https://gestion-estudiantes-default-rtdb.firebaseio.com",
+    projectId: "gestion-estudiantes",
+    storageBucket: "gestion-estudiantes.appspot.com",
+    messagingSenderId: "856374668412",
+    appId: "1:856374668412:web:ce6056410ed0d863fbadf9"
+
 };
 
 const app = initializeApp(firebaseConfig);
