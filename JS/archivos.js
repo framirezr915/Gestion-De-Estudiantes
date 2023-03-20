@@ -1,7 +1,7 @@
 const dropArea = document.querySelector(".contenido");
 const dragText = dropArea.querySelector('h2');
 const button = dropArea.querySelector('button');
-const input = dropArea.querySelector('#input-file');
+const input = dropArea.querySelector('.hidden-upload-btn');
 let files;
 
 
@@ -13,7 +13,7 @@ button.addEventListener('click', e => {
 
 
 input.addEventListener('change', function(){
-    let pdfFile = document.querySelector('#input-file').files[0];
+    let pdfFile = document.querySelector('.hidden-upload-btn').files[0];
     let pdfFileUrl = URL.createObjectURL(pdfFile);
     
     document.querySelector("#vista-previa").setAttribute('src', pdfFileUrl);
@@ -39,7 +39,7 @@ dropArea.addEventListener("dragleave", (e) => {
 })
 
 dropArea.addEventListener("drop", (e) => {
-    let pdfFile = document.querySelector('#input-file').files[0];
+    let pdfFile = document.querySelector('.hidden-upload-btn').files[0];
     let pdfFileUrl = URL.createObjectURL(pdfFile);
     
     document.querySelector("#vista-previa").setAttribute('src', pdfFileUrl);
