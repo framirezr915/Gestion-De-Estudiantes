@@ -17,47 +17,117 @@ html{
     
 }
 /* Side-bar styles */
+
+.upload-area{
+  margin-top:20px;
+  border-radius: 8px;
+}
+.upload{
+  background-color: rgb(0, 0, 65);
+  border: 1px solid rgb(0, 0, 65);
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  margin: 0px 45px;
+}
+.upload:active{
+  border-color: white;
+}
+.progress-container{
+  display: inline-block;
+  width: 65%;
+  border: 2px solid rgb(0, 0, 65);
+  height: 30px;
+  position: relative;
+  top: 13px;
+  padding: 2px;
+}
+.progress{
+  width: 0%;
+  background-color: rgb(0, 0, 65);
+  height: 100%;
+  transition-duration: .3s;
+}
+.percent{
+  display: inline-block;
+  margin-left: 20px;
+}
+.controls{
+  float: right;
+  margin-right: 45px;
+}
+.pause, .resume, .cancel{
+  background-color: rgb(0, 0, 65);
+  fill: white;
+  padding: 5px;
+  margin: 2px;
+  margin-top: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.resume{
+  display: none;
+}
 .side-bar{
-    display: flex;
-    flex-flow: column;
-    position: sticky;
-    justify-items: center;
-    background-color: rgb(0, 0, 65);
-    height: 100vh;
-    width: 150px;
-    margin-right: 20px;
-    float: left;
+  display: flex;
+  flex-flow: column;
+  position: sticky;
+  justify-items: center;
+  background-color: rgb(0, 0, 65);
+  height: 100vh;
+  width: 150px;
+  margin-right: 20px;
+  float: left;
 }
 .logo{
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-.perfil, .log-out{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: rgb(0, 0, 65);
-    margin-bottom: 20px;
-    padding: 20px;
-    color: white;
-    border-style: none;
-
-}
-.perfil img{
-    height: 30px;
-    margin-right: 10px;
-}
-
-.log-out{
+.asistencia, .grupos{
+  text-decoration: none;
   display: flex;
-  justify-content: center;
-  margin-top: 600px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(0, 0, 65);
+  margin-bottom: 20px;
+  padding: 20px;
+  color: white;
+
 }
+.asistencia img{
+  height: 30px;
+  margin-right: 10px;
+}
+.grupos img{
+  height: 30px;
+  margin-right: 10px;
+}
+.asistencia:hover, .grupos:hover{
+  transition: 0.3s;
+  background-color: #144272;
 
-.perfil:hover, .log-out:hover{
-    transition: 0.3s;
-    background-color: #144272;
-
+}
+.Back-btn{
+  display: flex;
+  background-color: rgb(0, 0, 65);
+  height: 50px;
+  width: 150px;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin-top: 150px;
+}
+.Back-btn img{
+  height: 30px;
+  margin: 10px;
+}
+.Back-btn:hover{
+  transition: 0.3s;
+  background-color: #144272;
+  
 }
 .estudiantes {
     list-style: none;
@@ -110,10 +180,6 @@ html{
 .logo{
 	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-.curso1:hover, .curso2:hover, .curso3:hover, .curso4:hover, .curso5:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 5px 2px rgb(73, 73, 73);
 }
 
 /* Keyframes */
