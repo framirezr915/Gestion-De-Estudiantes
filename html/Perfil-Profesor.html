@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/Perfil.css">
+	<script type="module" src="../JS/perfil.js"></script>
+	<title>Gestion de Estudiantes</title>
+</head>
+<body>
+	<div class="side-bar">
+        <div class="logo">
+            <img src="../multimedia/logo-white.svg" alt="" class="logo">
+        </div>
+		<div class="back-btn-container">
+			<a href="../html/Pantalla-Profesor.html" class="Back-btn">
+			  <img src="../multimedia/backarrow.svg" alt="back-arrow" />
+			  <p>Regresar</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="header-cursos">
+        <h2>Perfil de Profesor</h2>
+        <hr />
+      </div>
+
+	<h2>Nombre: <span id="nombre" contenteditable></span></h1>
+	<h2>Apellidos: <span id="apellidos" contenteditable></span></h2>
+	<h2>Correo electrónico: <span id="email" contenteditable></span></p>
+	<button onclick="guardar()">Actualizar información</button>
+</body>
+</html>

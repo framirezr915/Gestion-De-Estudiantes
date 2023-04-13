@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/Asignaciones.css" />
+    <title>Gestion De Estudiantes</title>
+
+
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="logo">
+        <img src="../multimedia/logo-white.svg" alt="" class="logo" />
+      </div>
+      <a class="grupos" href="../html/Estudiantes.html">
+        <img src="../multimedia/grupo.svg" alt="" />
+        <p>Alumnos</p>
+      </a>
+      <a class="grupos" href="">
+        <img src="../multimedia/grupo.svg" alt="" />
+        <p>Grupos</p>
+      </a>
+
+      <a class="asistencia" href="../html/login.html">
+        <img src="../multimedia/asistencia.svg" alt="" />
+        <p>Asistencia</p>
+      </a>
+
+      <div class="back-btn-container">
+        <a href="../html/Pantalla-Profesor.html" class="Back-btn">
+          <img src="../multimedia/backarrow.svg" alt="back-arrow" />
+          <p>Regresar</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="header-cursos">
+      <h2>Asignaciones</h2>
+      <hr />
+    </div>
+
+	<table>
+        <tr>
+            <td colspan="2">
+                <h1>Rúbrica</h1>
+            </td>
+        </tr>
+		<tr>
+			<th>Laboratorio 1</th>
+			<td><input type="number" name="criterio1" min="0" max="100" step="0.1"></td>
+		</tr>
+		<tr>
+			<th>Laboratorio 2</th>
+			<td><input type="number" name="criterio2" min="0" max="100" step="0.1"></td>
+		</tr>
+		<tr>
+			<th>Laboratorio 3</th>
+			<td><input type="number" name="criterio3" min="0" max="100" step="0.1"></td>
+		</tr>
+		<tr>
+			<th>Laboratorio 4</th>
+			<td><input type="number" name="criterio4" min="0" max="100" step="0.1"></td>
+		</tr>
+		<tr>
+			<th>Investigación</th>
+			<td><input type="number" name="criterio5" min="0" max="100" step="0.1"></td>
+		</tr>
+		<tr>
+			<th>Proyecto Final</th>
+			<td><input type="number" name="criterio6" min="0" max="100" step="0.1"></td>
+		</tr>
+		<tr>
+			<th>Total</th>
+			<td><input type="number" name="criterio7" min="0" max="100" step="0.1"></td>
+		</tr>
+	</table>
+</body>
+</html>
