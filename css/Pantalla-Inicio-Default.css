@@ -40,6 +40,7 @@ html{
     margin-bottom: 20px;
     padding: 20px;
     color: white;
+    border: none;
 
 }
 .perfil img{
@@ -49,6 +50,7 @@ html{
 .log-out img{
     height: 30px;
     margin-right: 10px;
+   
 }
 .perfil:hover, .log-out:hover{
     transition: 0.3s;
