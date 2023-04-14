@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/Foro-Discusiones-Estudiante.css">
+    <link rel="stylesheet" href="../css/Reclamos.css">
     <title>Gestion de Estudiantes</title>
 
     <script type="module" src="../JS/discusion.js"></script>
@@ -51,7 +51,7 @@
       <div class="Discusiones"></div>
     
 		<div class="formulario">
-			<h2>Foro de Discusión</h2>
+			<h2>Foro de Reclamos</h2>
 			<form>
 				<label for="nombre">Nombre:</label>
 				<input type="text" id="nombre" name="nombre" required>
@@ -62,8 +62,9 @@
 				<button type="submit" id="btnEnviar">Enviar</button>
 			</form>
       <!-- Lista de comentarios -->
+      <label class="respuestas">Respuestas recientes </label>
       <div class="foro-mensajes">
-        <label>Respuestas recientes </label>
+        
         <ul id="chatUl"></ul>
 
       </div>

@@ -17,59 +17,6 @@ html{
     
 }
 /* Side-bar styles */
-.upload-area{
-    margin-top:20px;
-    border-radius: 8px;
-}
-.upload{
-    background-color: rgb(0, 0, 65);
-    border: 1px solid rgb(0, 0, 65);
-    font-family: 'Noto Sans', sans-serif;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    margin: 0px 45px;
-}
-.upload:active{
-    border-color: white;
-}
-.progress-container{
-    display: inline-block;
-    width: 65%;
-    border: 2px solid rgb(0, 0, 65);
-    height: 30px;
-    position: relative;
-    top: 13px;
-    padding: 2px;
-}
-.progress{
-    width: 0%;
-    background-color: rgb(0, 0, 65);
-    height: 100%;
-    transition-duration: .3s;
-}
-.percent{
-    display: inline-block;
-    margin-left: 20px;
-}
-.controls{
-    float: right;
-    margin-right: 45px;
-}
-.pause, .resume, .cancel{
-    background-color: rgb(0, 0, 65);
-    fill: white;
-    padding: 5px;
-    margin: 2px;
-    margin-top: 18px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.resume{
-    display: none;
-}
 .side-bar{
     display: flex;
     flex-flow: column;
@@ -117,7 +64,7 @@ html{
     align-items: center;
     text-decoration: none;
     color: white;
-    margin-top: 150px;
+    margin-top: 350px;
 }
 .Back-btn img{
     height: 30px;
@@ -129,7 +76,7 @@ html{
     
 }
 
-/* Contenido styles */
+/* Discusiones styles */
 .header-content{
     display: flex;
     justify-content: center;
@@ -140,76 +87,11 @@ html{
 .contenido-container{
     display: flex;
     margin: 50px;
+    border: 1px solid black;
     height: 600px;
     justify-content: center;
     align-items: center;
-
-   
-    
 }
-/* .embed-container{
-    border: 5px dashed #ddd;
-    height: 800px;
-    width: 800px;
-    
-    
-}
-.embedPdf{
-    height: 300px;
-    width: 300px;
-} */
-.subir-archivo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.contenido{
-    border: 5px dashed #ddd;
-    height: 500px;
-    width: 700px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.contenido.active{
-    background-color: #b8d5fe;
-    color: black;
-    border: 2px dashed #618ac9;
-}
-
-.subir-archivo h2{
-    font-size: 30px;
-    color: black;
-    font-weight: 500;
-}
-.subir-archivo span{
-    font-size: 25px;
-    color: black;
-    font-weight: 500;
-
-}
-.subir-archivo button{
-    padding: 10px 25px;
-    font-size: 20px;
-    border: 0;
-    outline: none;
-    background-color: rgb(0, 0, 65);
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 20px;
-}
-.file-container{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border: solid 1px #ddd;
-}
-
 .btn-content{
     font-family: "Myriad Pro Regular";
     border: none;
@@ -232,22 +114,33 @@ html{
 }
 
 
+.foro-mensajes{
+    border: 4px solid rgb(0, 0, 65);
+    overflow: auto;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+}
 
-
-/* Header-asistencia styles */
-.header-asistencia{
+.respuestas{
+    margin-top: 30px;
+    color: rgb(0, 0, 65);
+    font-weight: bold;
+    font-size: 20pt;
+}
+/* Header-cursos styles */
+.header-cursos{
     margin: 30px;
 
 }
-.header-asistencia h2, hr{
+.header-cursos h2, hr{
     color: rgb(0, 0, 65);
     font-size: 30pt;
     margin-bottom: 20px;
 }
 
-
 /* Animaciones */
-.header-asistencia h2{
+.header-cursos h2{
     -webkit-animation:tracking-in-expand .7s 
     cubic-bezier(.215,.61,.355,1.000) both;
     animation:tracking-in-expand .7s cubic-bezier
@@ -257,7 +150,6 @@ html{
 	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
-
 
 /* Keyframes */
  @-webkit-keyframes text-focus-in {
@@ -284,13 +176,68 @@ html{
       opacity: 1;
     }
   }
-  
 
  @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
-.header-asistencia hr {
+.header-cursos hr {
     height: 3px;
     background-color: rgb(0, 0, 65);
     border-radius: 3px;
 }
 
-
+/*Formulario styles*/
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+#comentarios {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.comentario {
+    border: 1px solid #ccc;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+.comentario .autor {
+    font-weight: bold;
+}
+.comentario .fecha {
+    font-size: 0.8em;
+    color: #666;
+}
+.comentario p {
+    margin: 10px 0;
+}
+.formulario {
+    border: 1px solid #ccc;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+.formulario input[type="text"],
+.formulario textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.formulario textarea {
+    height: 100px;
+}
+.formulario button {
+    background-color: rgb(0, 0, 65);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.formulario button:hover {
+    background-color: #144272;
+}

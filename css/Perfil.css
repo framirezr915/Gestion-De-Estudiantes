@@ -31,65 +31,34 @@ html{
 .logo{
     margin-bottom: 30px;
 }
-.perfil, .log-out{
-    text-decoration: none;
+.Back-btn{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     background-color: rgb(0, 0, 65);
-    margin-bottom: 20px;
-    padding: 20px;
+    height: 50px;
+    width: 150px;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
     color: white;
-    border: none;
-
+    margin-top: 350px;
 }
-.perfil img{
+.Back-btn img{
     height: 30px;
-    margin-right: 10px;
+    margin: 10px;
 }
-.log-out img{
-    height: 30px;
-    margin-right: 10px;
-   
-}
-.perfil:hover, .log-out:hover{
+.Back-btn:hover{
     transition: 0.3s;
     background-color: #144272;
-
+    
 }
-/* Cursos-Container Styles */
-
-.cursos-container{
+/* Perfil styles */
+.header-content{
     display: flex;
-    flex-direction: row wrap;
-    border-radius: 10px;
-    margin-right: 20px;
-
-}
-
-.curso1, .curso2, .curso3, .curso4, .curso5{
-
-    background-color: #182747;
-    color: white;
-    margin: 30px;
-    display: flex;
-    height: 200px;
-    width: 300px;
-    border-radius: 20px;
-    transition: transform .2s;
-    align-items: center;
-    font-size: larger;
-    text-align: center;
     justify-content: center;
+    margin: 50px;
+    justify-content: space-evenly;
 }
-
-
-
-
-
-
-
-/* Header-cursos styles */
+/* Header-perfil styles */
 .header-cursos{
     margin: 30px;
 
@@ -99,26 +68,30 @@ html{
     font-size: 30pt;
     margin-bottom: 20px;
 }
-
-
-/* Animaciones minimalistas*/
-.header-cursos h2{
-    -webkit-animation:tracking-in-expand .7s 
-    cubic-bezier(.215,.61,.355,1.000) both;
-    animation:tracking-in-expand .7s cubic-bezier
-    (.215,.61,.355,1.000) both
-}
-.logo{
-	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-.curso1:hover, .curso2:hover, .curso3:hover, .curso4:hover, .curso5:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 5px 2px rgb(73, 73, 73);
+h2 {
+    color: rgb(0, 0, 65);
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
+button {
+    background-color: rgb(0, 0, 65);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.button:hover{
+    transition: 0.3s;
+    background-color: #144272;
+    
+}
 /* Keyframes */
- @-webkit-keyframes text-focus-in {
+@-webkit-keyframes text-focus-in {
     0% {
       -webkit-filter: blur(12px);
               filter: blur(12px);
@@ -142,7 +115,6 @@ html{
       opacity: 1;
     }
   }
-  
 
  @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
 .header-cursos hr {

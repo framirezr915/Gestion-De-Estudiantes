@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/Grupos-Profesor.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="../JS/checkStatus.js"></script>
+    <title>Gestion De Estudiantes</title>
+    <!--link rel="stylesheet" href="../css/style.css"-->
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="logo">
+        <img src="../multimedia/logo-white.svg" alt="" class="logo" />
+      </div>
+      <a class="grupos" href="../html/Estudiantes.html">
+        <img src="../multimedia/grupo.svg" alt="" />
+        <p>Alumnos</p>
+      </a>
+      <a class="grupos" href="">
+        <img src="../multimedia/grupo.svg" alt="" />
+        <p>Grupos</p>
+      </a>
+
+      <a class="asistencia" href="../html/login.html">
+        <img src="../multimedia/asistencia.svg" alt="" />
+        <p>Asistencia</p>
+      </a>
+
+      <div class="back-btn-container">
+        <a href="../html/Pantalla-Profesor.html" class="Back-btn">
+          <img src="../multimedia/backarrow.svg" alt="back-arrow" />
+          <p>Regresar</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="header-cursos">
+      <h2 id="Nombre">Grupos</h2>
+      <hr />
+    </div>
+
+
+    <!-- creacion de grupos -->
+    <div class="grupos-container">
+    </div>
+
+    <div class="estudiantes-container">
+        <h3>Crear Grupo</h3>
+        <ul class="estudiantes-list">
+          <li>Estudiante 1 <input type="checkbox"></input></li>
+          <li>Estudiante 2 <input type="checkbox"></input></li>
+          <li>Estudiante 3 <input type="checkbox"></input></li>
+          
+        </ul>
+        <button id="crear-grupo-btn">Crear Grupo</button>
+      </div>
+    <script type="module" src="../JS/Grupos.js" ></script>
+  </body>
+</html>

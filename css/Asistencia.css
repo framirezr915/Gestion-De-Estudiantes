@@ -64,7 +64,7 @@ html{
     align-items: center;
     text-decoration: none;
     color: white;
-    margin-top: 350px;
+    margin-top: 150px;
 }
 .Back-btn img{
     height: 30px;
@@ -75,55 +75,29 @@ html{
     background-color: #144272;
     
 }
+/* Tabla styles */
+  th {
+    padding: 4px;
+    text-align: center;
+  } 
+  td {
+    padding: 9px;
+    text-align: center;
+  }
+  
+  input[type="checkbox"] {
+    display: block;
+    margin: 0 auto;
+  }
+  
 
-/* Discusiones styles */
+/* Asistencia styles */
 .header-content{
     display: flex;
     justify-content: center;
     margin: 50px;
     justify-content: space-evenly;
 }
-
-.contenido-container{
-    display: flex;
-    margin: 50px;
-    border: 1px solid black;
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-}
-.btn-content{
-    font-family: "Myriad Pro Regular";
-    border: none;
-    border-radius: 10px;
-    height: 50px;
-    width: 150px;
-    background-color: rgb(0, 0, 65);
-    color: white;
-}
-
-.btn-content:hover{
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #144272;
-    
-}
-.btn-content:focus{
-    background-color: #144272;
-    
-}
-
-/* Header-cursos styles */
-.header-cursos{
-    margin: 30px;
-
-}
-.header-cursos h2, hr{
-    color: rgb(0, 0, 65);
-    font-size: 30pt;
-    margin-bottom: 20px;
-}
-
 /* Animaciones */
 .header-cursos h2{
     -webkit-animation:tracking-in-expand .7s 
@@ -134,6 +108,16 @@ html{
 .logo{
 	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* Header-asistencia styles */
+.header-cursos{
+    margin: 30px;
+
+}
+.header-cursos h2, hr{
+    color: rgb(0, 0, 65);
+    font-size: 30pt;
+    margin-bottom: 20px;
 }
 
 /* Keyframes */
@@ -161,68 +145,12 @@ html{
       opacity: 1;
     }
   }
+  
+  @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+  .header-cursos hr {
+      height: 3px;
+      background-color: rgb(0, 0, 65);
+      border-radius: 3px;
+  }
 
- @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
-.header-cursos hr {
-    height: 3px;
-    background-color: rgb(0, 0, 65);
-    border-radius: 3px;
-}
 
-/*Formulario styles*/
-h1 {
-    text-align: center;
-    margin: 30px 0;
-}
-#comentarios {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-.comentario {
-    border: 1px solid #ccc;
-    padding: 50px;
-    margin-bottom: 10px;
-}
-.comentario .autor {
-    font-weight: bold;
-}
-.comentario .fecha {
-    font-size: 0.8em;
-    color: #666;
-}
-.comentario p {
-    margin: 10px 0;
-}
-.formulario {
-    border: 1px solid #ccc;
-    padding: 50px;
-    margin-bottom: 20px;
-}
-.formulario label {
-    display: block;
-    margin-bottom: 5px;
-}
-.formulario input[type="text"],
-.formulario textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-}
-.formulario textarea {
-    height: 100px;
-}
-.formulario button {
-    background-color: rgb(0, 0, 65);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.formulario button:hover {
-    background-color: #144272;
-}
