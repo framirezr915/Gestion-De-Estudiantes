@@ -10,7 +10,7 @@ html{
     background-color: #ffffff;
 }
 *{
-    overflow: hidden;
+    overflow: auto;
     font-family: 'Myriad Pro Regular';
     margin: 0px;
     padding: 0px;
@@ -71,6 +71,7 @@ html{
     display: none;
 }
 .side-bar{
+    position: sticky;
     display: flex;
     flex-flow: column;
     position: sticky;
@@ -267,7 +268,8 @@ html{
     margin-top: 10px;
 }
 .estudiantes-container {
-    margin-top: 100px;
+    height: 200px;
+    margin-top: 50px;
     border: 1px solid black;
     width: 30%;
     margin-right: 100px;

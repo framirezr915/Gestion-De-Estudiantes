@@ -4,19 +4,12 @@ import { getDatabase, set, ref, push, child, onValue } from "https://www.gstatic
 const firebaseConfig = {
 
     apiKey: "AIzaSyD6z7vPeIDhq7MQrV7M6sZOq2rFn_0ys6Q",
-
   authDomain: "gestion-de-estudiantes.firebaseapp.com",
-
   databaseURL: "https://gestion-de-estudiantes-default-rtdb.firebaseio.com",
-
   projectId: "gestion-de-estudiantes",
-
   storageBucket: "gestion-de-estudiantes.appspot.com",
-
   messagingSenderId: "195992130911",
-
   appId: "1:195992130911:web:d883094ec0cd5d115612ea",
-
   measurementId: "G-MZ74HG8FX8"
 
 

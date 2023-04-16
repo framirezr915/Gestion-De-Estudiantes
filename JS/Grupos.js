@@ -16,8 +16,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const gruposRef = ref(db, "Grupos");
-
-const dataRef = ref(db, "Estudiantes");
+const curso5ref = ref(db, "Cursos/5/Grupos")
+const dataRef = ref(db, "Cursos/5");
 
 onValue(dataRef, (snapshot) => {
   const estudiantes = snapshot.val();
@@ -31,7 +31,7 @@ onValue(dataRef, (snapshot) => {
     const li = document.createElement("li");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    li.textContent = `${estudiante.Nombre}`;
+    li.textContent = `${estudiante.Nombre} ${estudiante.Apellidos}`;
     li.dataset.id = key;
     li.appendChild(checkbox);
     estudiantesList.appendChild(li);
@@ -54,14 +54,14 @@ crearGrupoBtn.addEventListener("click", (e) => {
 
 function agregarGrupo(estudiantes) {
   const db = getDatabase();
-  const gruposRef = ref(db, "Grupos");
-  const nuevoGrupoRef = push(gruposRef);
+  const curso5ref = ref(db, "Cursos/5/Grupos");
+  const nuevoGrupoRef = push(curso5ref);
   set(nuevoGrupoRef, { estudiantes });
 }
 
 const gruposList = document.querySelector(".grupos-container");
 
-onValue(gruposRef, (snapshot) => {
+onValue(curso5ref, (snapshot) => {
   const grupos = snapshot.val();
   gruposList.innerHTML = "";
   let numGrupo = 1;
@@ -78,7 +78,7 @@ onValue(gruposRef, (snapshot) => {
 gruposList.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
     const grupoKey = e.target.dataset.grupo;
-    const grupoRef = ref(db, `Grupos/${grupoKey}`);
+    const grupoRef = ref(db, `Cursos/5/Grupos/${grupoKey}`);
     remove(grupoRef)
       .then(() => {
         console.log("Grupo eliminado con éxito.");
