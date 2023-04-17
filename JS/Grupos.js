@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
+import { getAuth,signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import {getFirestore, collection, addDoc, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
-import { getDatabase, ref, onValue, push, set, remove} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import {getFirestore, collection, addDoc, getDocs, onSnapshot} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getDatabase, ref, onValue, push, set, remove, orderByChild} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD6z7vPeIDhq7MQrV7M6sZOq2rFn_0ys6Q",
@@ -16,8 +17,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const gruposRef = ref(db, "Grupos");
+const curso5ref = ref(db, "Cursos/5/Grupos")
+const dataRef = ref(db, "Cursos/5");
 
-const dataRef = ref(db, "Estudiantes");
+
 
 onValue(dataRef, (snapshot) => {
   const estudiantes = snapshot.val();
@@ -31,7 +34,7 @@ onValue(dataRef, (snapshot) => {
     const li = document.createElement("li");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    li.textContent = `${estudiante.Nombre}`;
+    li.textContent = `${estudiante.Nombre} ${estudiante.Apellidos}`;
     li.dataset.id = key;
     li.appendChild(checkbox);
     estudiantesList.appendChild(li);
@@ -54,14 +57,14 @@ crearGrupoBtn.addEventListener("click", (e) => {
 
 function agregarGrupo(estudiantes) {
   const db = getDatabase();
-  const gruposRef = ref(db, "Grupos");
-  const nuevoGrupoRef = push(gruposRef);
+  const curso5ref = ref(db, "Cursos/5/Grupos");
+  const nuevoGrupoRef = push(curso5ref);
   set(nuevoGrupoRef, { estudiantes });
 }
 
 const gruposList = document.querySelector(".grupos-container");
 
-onValue(gruposRef, (snapshot) => {
+onValue(curso5ref, (snapshot) => {
   const grupos = snapshot.val();
   gruposList.innerHTML = "";
   let numGrupo = 1;
@@ -78,7 +81,7 @@ onValue(gruposRef, (snapshot) => {
 gruposList.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
     const grupoKey = e.target.dataset.grupo;
-    const grupoRef = ref(db, `Grupos/${grupoKey}`);
+    const grupoRef = ref(db, `Cursos/5/Grupos/${grupoKey}`);
     remove(grupoRef)
       .then(() => {
         console.log("Grupo eliminado con éxito.");
@@ -88,89 +91,3 @@ gruposList.addEventListener("click", (e) => {
       });
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Obtener los estudiantes seleccionados y agregar un nuevo grupo
-
-// // const estudiantesCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
-// // const estudiantesSeleccionados = [];
-// // estudiantesCheckbox.forEach((checkbox) => {
-// //   estudiantesSeleccionados.push(checkbox.parentElement.textContent.trim());
-// // });
-
-// // const nombreGrupo = prompt("Ingresa el nombre del nuevo grupo:");
-// // agregarGrupo(nombreGrupo, estudiantesSeleccionados);
-
-// // Obtener los elementos necesarios
-// // const estudiantes = document.querySelectorAll('.estudiantes-list li');
-// // const botonAgregarGrupo = document.querySelector('.estudiantes-list button');
-// // const gruposContainer = document.querySelector('.grupos-container');
-
-// // Agregar evento click al botón de "Crear Grupo"
-// // botonAgregarGrupo.addEventListener('click', () => {
-// //   Obtener los estudiantes seleccionados
-// //   const estudiantesSeleccionados = [];
-// //   estudiantes.forEach((estudiante) => {
-// //     if (estudiante.querySelector('input[type="checkbox"]').checked) {
-// //       estudiantesSeleccionados.push(estudiante.innerText);
-// //     }
-// //   });
-
-// //   Crear nuevo grupo
-// //   if (estudiantesSeleccionados.length > 0) {
-// //     const nuevoGrupo = document.createElement('div');
-// //     nuevoGrupo.classList.add('groups');
-
-// //     const accionesGrupo = document.createElement('div');
-// //     accionesGrupo.classList.add('grupo-acciones');
-
-// //     const tituloGrupo = document.createElement('h3');
-// //     tituloGrupo.innerText = 'Grupo';
-
-// //     const botonEliminarGrupo = document.createElement('button');
-// //     botonEliminarGrupo.innerText = 'Eliminar';
-// //     botonEliminarGrupo.addEventListener('click', () => {
-// //       nuevoGrupo.remove();
-// //     });
-
-// //     accionesGrupo.appendChild(tituloGrupo);
-// //     accionesGrupo.appendChild(botonEliminarGrupo);
-// //     nuevoGrupo.appendChild(accionesGrupo);
-
-// //     const estudiantesGrupo = document.createElement('ul');
-// //     estudiantesGrupo.classList.add('estudiantes');
-
-// //     estudiantesSeleccionados.forEach((estudiante) => {
-// //       const estudianteLi = document.createElement('li');
-// //       estudianteLi.innerText = estudiante;
-// //       estudiantesGrupo.appendChild(estudianteLi);
-// //     });
-
-// //     nuevoGrupo.appendChild(estudiantesGrupo);
-// //     gruposContainer.appendChild(nuevoGrupo);
-
-// //     Limpiar selección de checkboxes
-// //     estudiantes.forEach((estudiante) => {
-// //       estudiante.querySelector('input[type="checkbox"]').checked = false;
-// //     });
-// //   }
-// // });
