@@ -23,25 +23,60 @@ let chatUl = document.getElementById('chatUl');
 
 // Agrega un manejador de eventos para el botón "Enviar"
 btnEnviar.addEventListener("click", (e) => {
-    let txtMensaje = document.getElementById('mensaje').value;
-    let name = document.getElementById('nombre').value;
-    let html = "<li><b>"+name+": </b>"+txtMensaje+"</li>";
-    chatUl.innerHTML += html;
+  const name = document.getElementById('nombre').value;
+  const message = document.getElementById('mensaje').value;
+  const courseId = sessionStorage.getItem('ID');
 
-    // Agrega los datos del mensaje a la base de datos
-    const id = push(child(ref(database), 'messages')).key;
-    set(ref(database, 'messages/' + id), {
-        name : name,
-        message : txtMensaje
-    });
+  // Agregar un nuevo mensaje para el curso actual
+  const messagesRef = ref(database, 'messages/' + courseId);
+  const newMessageRef = push(messagesRef);
+  set(newMessageRef, {
+    name: name,
+    message: message,
+    courseId: courseId
+  });
+
+  document.getElementById('mensaje').value = '';
 });
 
-// Recupera los datos de la base de datos y actualiza la lista de chat en la página HTML
-onValue(ref(database, 'messages'), (snapshot) => {
-    chatUl.innerHTML = ''; // Borra la lista actual de mensajes
-    snapshot.forEach((childSnapshot) => {
+// Actualizar la lista de chat con los mensajes para el curso actual
+const updateChat = () => {
+    const courseId = sessionStorage.getItem('ID');
+    const courseMessagesRef = ref(database, 'messages/' + courseId);
+  
+    onValue(courseMessagesRef, (snapshot) => {
+      chatUl.innerHTML = '';
+      snapshot.forEach((childSnapshot) => {
         const message = childSnapshot.val();
         const html = "<li><b>" + message.name + ": </b>" + message.message + "</li>";
         chatUl.innerHTML += html;
+      });
     });
+  };
+  
+// Almacenar el ID del curso en sessionStorage y actualizar la lista de chat
+const selectCourse = (courseId) => {
+  sessionStorage.setItem('ID', courseId);
+  updateChat();
+};
+
+// Obtener la lista de cursos y agregar elementos HTML para cada uno
+const coursesRef = ref(database, 'courses/');
+onValue(coursesRef, (snapshot) => {
+  snapshot.forEach((childSnapshot) => {
+    const course = childSnapshot.val();
+    const courseId = childSnapshot.key;
+    const html = '<li><a href="#" onclick="selectCourse(\'' + courseId + '\')">' + course.name + '</a></li>';
+    document.getElementById('courseList').innerHTML += html;
+  });
 });
+
+// Actualizar la lista de chat cuando el ID del curso cambie
+window.addEventListener('storage', (e) => {
+  if (e.key === 'ID') {
+    updateChat();
+  }
+});
+
+// Llamamos a la función para cargar los comentarios en tiempo real
+cargarComentarios();
