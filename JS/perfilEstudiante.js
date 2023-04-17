@@ -25,16 +25,15 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase();
 const dbref = ref(db);
-
 var usuario = sessionStorage.getItem("status")
 
-get(child(dbref, "Profesores/" + usuario))
+get(child(dbref, "Estudiantes/" + usuario))
     .then((snapshot)=>{
         if(snapshot.exists()){
 
 document.getElementById(("nombre")).innerHTML = (snapshot.val().Nombre);
 document.getElementById(("apellidos")).innerHTML = (snapshot.val().Apellidos);
-document.getElementById(("email")).innerHTML = (snapshot.val().Email);
+document.getElementById(("email")).innerHTML = (snapshot.val().email);
 
         }else{
             console.log("No data found");

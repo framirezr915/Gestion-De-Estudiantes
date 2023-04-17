@@ -43,6 +43,7 @@ sessionStorage.setItem(("btnCurso"+i),snapshot.val().Nombre);
 
 btnCurso5.addEventListener ('click', (e) => {
     sessionStorage.setItem("Nombre",sessionStorage.getItem("btnCurso5"));
+    sessionStorage.setItem("ID","5");
     location.replace("../html/Pantalla-Profesor-Semanas.html")
     
     
@@ -50,12 +51,14 @@ btnCurso5.addEventListener ('click', (e) => {
 
 btnCurso6.addEventListener ('click', (e) => {
     sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso6"));
+    sessionStorage.setItem("ID","6");
     location.replace("../html/Pantalla-Profesor-Semanas.html")
     
 });
 
 btnCurso7.addEventListener ('click', (e) => {
     sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso7"));
+    sessionStorage.setItem("ID","7");
     location.replace("../html/Pantalla-Profesor-Semanas.html")
     
 });

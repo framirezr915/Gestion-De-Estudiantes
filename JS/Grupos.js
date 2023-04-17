@@ -17,7 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const gruposRef = ref(db, "Grupos");
-const curso5ref = ref(db, "Cursos/5/Grupos")
+const curso5ref = ref(db, "Grupos/"+"Cursos/"+sessionStorage.getItem("ID")+"/Grupos")
 const dataRef = ref(db, "Cursos/5");
 
 
@@ -57,7 +57,7 @@ crearGrupoBtn.addEventListener("click", (e) => {
 
 function agregarGrupo(estudiantes) {
   const db = getDatabase();
-  const curso5ref = ref(db, "Cursos/5/Grupos");
+  const curso5ref = ref(db, "Grupos/"+"Cursos/"+sessionStorage.getItem("ID")+"/Grupos");
   const nuevoGrupoRef = push(curso5ref);
   set(nuevoGrupoRef, { estudiantes });
 }
@@ -81,7 +81,7 @@ onValue(curso5ref, (snapshot) => {
 gruposList.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
     const grupoKey = e.target.dataset.grupo;
-    const grupoRef = ref(db, `Cursos/5/Grupos/${grupoKey}`);
+    const grupoRef = ref(db,'Grupos/'+'Cursos/'+sessionStorage.getItem("ID")+'/Grupos/' +`${grupoKey}`);
     remove(grupoRef)
       .then(() => {
         console.log("Grupo eliminado con éxito.");
