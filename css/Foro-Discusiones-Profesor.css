@@ -10,7 +10,7 @@ html{
     background-color: #ffffff;
 }
 *{
-    overflow: scroll;
+    overflow: hidden;
     font-family: 'Myriad Pro Regular';
     margin: 0px;
     padding: 0px;
