@@ -48,38 +48,6 @@ for (const key in estudiantes) {
   estudiantesTable.appendChild(tr);
 }
 
-const guardarBtn = document.querySelector("#Guardarbtn");
-guardarBtn.addEventListener("click", () => {
-  const estudiantesTable = document.querySelector("#estudiantesTable tbody");
-  const filas = estudiantesTable.querySelectorAll("tr");
-
-  // Crear una colección para la asistencia
-  const asistenciaCollection = collection(db, "Asistencia");
-
-  // Recorrer cada fila de la tabla
-  filas.forEach((fila) => {
-    const nombreTd = fila.querySelector("td:first-child");
-    const nombre = nombreTd.textContent.trim();
-
-    // Crear un objeto con los datos del estudiante
-    const estudiante = { Nombre: nombre };
-
-    // Recorrer cada checkbox de la fila y guardar su valor en el objeto del estudiante
-    const checkboxes = fila.querySelectorAll("td input[type='checkbox']");
-    checkboxes.forEach((checkbox, index) => {
-      estudiante[`Semana${index + 1}`] = checkbox.checked;
-    });
-
-    // Guardar el objeto del estudiante en Firebase
-    addDoc(asistenciaCollection, estudiante)
-      .then(() => {
-        console.log("Asistencia guardada correctamente");
-      })
-      .catch((error) => {
-        console.error("Error al guardar la asistencia: ", error);
-      });
-  });
-});
 
 
 });
