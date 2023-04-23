@@ -6,11 +6,14 @@
     src: local('Myriad Pro Regular'), url('../Fonts/MYRIADPRO-REGULAR.woff') format('woff');
     }
 /* Default styles */
+body{
+  overflow: auto;
+}
 html{
     background-color: #ffffff;
 }
 *{
-    overflow: hidden;
+    
     font-family: 'Myriad Pro Regular';
     margin: 0px;
     padding: 0px;
@@ -168,3 +171,23 @@ html{
   }
 
 
+  
+  .container {
+    width: 80%;
+    text-align: center;
+  }
+  
+  .left, .right {
+    display: inline-block;
+    width: 48%;
+    height: 1000px;
+    
+  }
+  
+  .left {
+    margin-right: 2%;
+  }
+  
+  .right {
+    margin-left: 2%;
+  }
