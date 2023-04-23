@@ -119,6 +119,7 @@ miNota.value=nota;
 
 };
 
+////nota actualizar
 function updateData(){
     var database = firebase.database();
     

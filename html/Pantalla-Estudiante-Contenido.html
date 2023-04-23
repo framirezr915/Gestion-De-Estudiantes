@@ -4,8 +4,11 @@
     <link rel="stylesheet" href="/css/Pantalla-Estudiante-Contenido.css">
     <title>Gestion de Estudiantes</title>
     <script type="module" src=""></script>
-    <script src="gestion-de-estudiantes.firebaseapp.com"></script>
-    <script src="https://gestion-de-estudiantes-default-rtdb.firebaseio.com"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script src="../JS/PantallaContenidoEstudiante.js"></script>
 </head>
 <body>
     <div class="side-bar">
@@ -26,7 +29,7 @@
       </div>
 
       <div class="header-cursos">
-        <h2>Nombre de Curso</h2>
+        <h2 id="TituloContenido">Nombre de Curso</h2>
         <hr />
       </div>
 
@@ -43,6 +46,7 @@
 
       <div class="contenido">
         <h3>Contenido del curso</h3>
+        
         <hr />
       </div>
 
@@ -52,34 +56,20 @@
                 <h2>Documentos</h2>
 
             </td>
-        </tr>
-    <tr>
-      <th></th>
-      <td></td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-    </tr>
+            <td>
+            <button id="btnDescarga4" type="button"  >Laboratorio1</button>
+            <button id="btnDescarga5" type="button"  >Laboratorio2</button>
+            <button id="btnDescarga6" type="button"  >Laboratorio3</button>
+            <embed src="" id="image2" width="800px" height="1000px" />
+          </td>
   </table>
 
-  </div>
+
+
+  
+    
+  
+
   <script type="module" src=""></script>
 </body>
 </html>

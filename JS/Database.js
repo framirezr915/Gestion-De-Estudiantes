@@ -36,11 +36,35 @@ document.getElementById(("btnCurso"+i)).innerHTML = (snapshot.val().Nombre);
     })
     }
     
-
-
-
-
-
 };
 
 findData();
+
+btnCurso1.addEventListener ('click', (e) => {
+    sessionStorage.setItem("Nombre",sessionStorage.getItem("btnCurso1"));
+    sessionStorage.setItem("ID","1");
+    location.replace("../html/Pantalla-Estudiante-Contenido.html")
+    
+    
+});
+
+btnCurso2.addEventListener ('click', (e) => {
+    sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso2"));
+    sessionStorage.setItem("ID","2");
+    location.replace("../html/Pantalla-Estudiante-Contenido.html")
+    
+});
+
+btnCurso3.addEventListener ('click', (e) => {
+    sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso3"));
+    sessionStorage.setItem("ID","3");
+    location.replace("../html/Pantalla-Estudiante-Contenido.html")
+    
+});
+
+btnCurso4.addEventListener ('click', (e) => {
+    sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso4"));
+    sessionStorage.setItem("ID","4");
+    location.replace("../html/Pantalla-Estudiante-Contenido.html")
+    
+});
