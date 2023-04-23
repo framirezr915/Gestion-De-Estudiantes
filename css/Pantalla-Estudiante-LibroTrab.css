@@ -14,7 +14,7 @@ html{
     font-family: 'Myriad Pro Regular';
     margin: 0px;
     padding: 0px;
-    
+
 }
 /* Side-bar styles */
 .side-bar{
@@ -35,7 +35,12 @@ html{
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(0, 0, 65);
+    margin-bottom: 20px;
+    padding: 20px;
     color: white;
+
 }
 .grupos img{
     height: 30px;
@@ -44,36 +49,16 @@ html{
 .grupos:hover{
     transition: 0.3s;
     background-color: #144272;
-}
-.Back-btn{
-    display: flex;
-    background-color: rgb(0, 0, 65);
-    height: 50px;
-    width: 150px;
-    justify-content: flex-start;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    margin-top: 350px;
-}
-.Back-btn img{
-    height: 30px;
-    margin: 10px;
-}
-.Back-btn:hover{
-    transition: 0.3s;
-    background-color: #144272;
-    
+
 }
 
-/* Discusiones styles */
+/* Contenido styles */
 .header-content{
     display: flex;
     justify-content: center;
     margin: 50px;
     justify-content: space-evenly;
 }
-
 .contenido-container{
     display: flex;
     margin: 50px;
@@ -91,32 +76,15 @@ html{
     background-color: rgb(0, 0, 65);
     color: white;
 }
-
 .btn-content:hover{
     cursor: pointer;
     transition: 0.3s;
     background-color: #144272;
-    
+
 }
 .btn-content:focus{
     background-color: #144272;
-    
-}
 
-
-.foro-mensajes{
-    border: 4px solid rgb(0, 0, 65);
-    overflow: auto;
-    height: 200px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.respuestas{
-    margin-top: 30px;
-    color: rgb(0, 0, 65);
-    font-weight: bold;
-    font-size: 20pt;
 }
 /* Header-cursos styles */
 .header-cursos{
@@ -137,8 +105,8 @@ html{
     (.215,.61,.355,1.000) both
 }
 .logo{
-	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 /* Keyframes */
@@ -173,61 +141,144 @@ html{
     background-color: rgb(0, 0, 65);
     border-radius: 3px;
 }
-
-/*Formulario styles*/
-h1 {
+/* Rúbrica styles */
+.table-container {
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+}
+h2 {
     text-align: center;
-    margin: 30px 0;
 }
-#comentarios {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+table {
+    background-color: #d5dae7;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 6px;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
 }
-.comentario {
-    border: 1px solid #ccc;
-    padding: 50px;
-    margin-bottom: 10px;
+th {
+    color: rgb(0, 0, 65);
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    text-align: left;
 }
-.comentario .autor {
-    font-weight: bold;
+td {
+    padding: 0.5em 1em;
 }
-.comentario .fecha {
-    font-size: 0.8em;
-    color: #666;
+.white-box {
+    background-color: white;
+    padding: 10px;
+    width: 40px;
+    height: 3px;
+    margin: 0 auto;
 }
-.comentario p {
-    margin: 10px 0;
+/* Upload styles */
+.upload-area{
+    margin-top:20px;
+    border-radius: 8px;
 }
-.formulario {
-    border: 1px solid #ccc;
-    padding: 50px;
-    margin-bottom: 20px;
-}
-.formulario label {
-    display: block;
-    margin-bottom: 5px;
-}
-.formulario input[type="text"],
-.formulario textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-}
-.formulario textarea {
-    height: 100px;
-}
-.formulario button {
+.upload{
     background-color: rgb(0, 0, 65);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 65);
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin: 0px 45px;
+}
+.upload:active{
+    border-color: white;
+}
+.progress-container{
+    display: inline-block;
+    width: 65%;
+    border: 2px solid rgb(0, 0, 65);
+    height: 30px;
+    position: relative;
+    top: 13px;
+    padding: 2px;
+}
+.progress{
+    width: 0%;
+    background-color: rgb(0, 0, 65);
+    height: 100%;
+    transition-duration: .3s;
+}
+.percent{
+    display: inline-block;
+    margin-left: 20px;
+}
+.controls{
+    float: right;
+    margin-right: 45px;
+}
+.pause, .resume, .cancel{
+    background-color: rgb(0, 0, 65);
+    fill: white;
+    padding: 5px;
+    margin: 2px;
+    margin-top: 18px;
+    border-radius: 50%;
     cursor: pointer;
 }
-.formulario button:hover {
-    background-color: #144272;
+.resume{
+    display: none;
+}
+.subir-archivo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contenido{
+    border: 5px dashed #ddd;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contenido.active{
+    background-color: #b8d5fe;
+    color: black;
+    border: 2px dashed #618ac9;
+}
+
+.subir-archivo h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+.subir-archivo span{
+    font-size: 25px;
+    color: black;
+    font-weight: 500;
+
+}
+.subir-archivo button{
+    padding: 10px 25px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: rgb(0, 0, 65);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+}
+.file-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: solid 1px #ddd;
 }
