@@ -6,6 +6,9 @@
     src: local('Myriad Pro Regular'), url('../Fonts/MYRIADPRO-REGULAR.woff') format('woff');
     }
 /* Default styles */
+body{
+    overflow: auto;
+  }
 html{
     background-color: #ffffff;
 }

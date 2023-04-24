@@ -86,6 +86,26 @@ html{
     background-color: #144272;
 
 }
+.Back-btn{
+    display: flex;
+    background-color: rgb(0, 0, 65);
+    height: 50px;
+    width: 150px;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 350px;
+}
+.Back-btn img{
+    height: 30px;
+    margin: 10px;
+}
+.Back-btn:hover{
+    transition: 0.3s;
+    background-color: #144272;
+
+}
 /* Header-cursos styles */
 .header-cursos{
     margin: 30px;
