@@ -1,4 +1,3 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyD6z7vPeIDhq7MQrV7M6sZOq2rFn_0ys6Q",
     authDomain: "gestion-de-estudiantes.firebaseapp.com",
@@ -8,6 +7,7 @@ const firebaseConfig = {
     appId: "1:195992130911:web:d883094ec0cd5d115612ea",
     measurementId: "G-MZ74HG8FX8"
   };
+
 firebase.initializeApp(firebaseConfig);
 // get dom in variables
 var upload = document.getElementsByClassName('upload')[0];
@@ -19,7 +19,7 @@ var resume = document.getElementsByClassName('resume')[0];
 var cancel = document.getElementsByClassName('cancel')[0];
 
 
-document.getElementById(("Nombre")).innerHTML = sessionStorage.getItem("Nombre");
+
 // create function for select a file
 upload.onclick = function () {
     hiddenBtn.click();
@@ -88,7 +88,28 @@ hiddenBtn.onchange = function () {
     )
     }
 
-DiscusionesBtn.addEventListener ('click', (e) => {
 
-location.replace("../html/Foro-Discusiones-Profesor.html")
-});
+// notas
+const dbRef = firebase.database().ref();
+for(let i= 1; i<8; i++){
+
+
+    dbRef.child("Asignaciones").child("Cursos").child(sessionStorage.getItem("ID")).child("Estudiantes").child(sessionStorage.getItem("std")).child("Notas").child(i).get().then((snapshot) => {
+        if (snapshot.exists()) {
+        
+    
+           var nota = (snapshot.val().Nota);
+    var miNota = document.getElementById("span"+i);
+    miNota.value=nota;
+    
+    
+        console.log(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+    
+    };
+    
