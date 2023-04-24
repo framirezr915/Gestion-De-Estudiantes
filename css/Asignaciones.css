@@ -114,6 +114,47 @@ html{
   input[type="number"] {
     margin-left: 15em;
   }
+  #btnActulizar2 {
+    background-color: rgb(0, 0, 65);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #btnDescarga {
+    background-color: rgb(0, 0, 65);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #btnDescarga2 {
+    background-color: rgb(0, 0, 65);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #btnDescarga3 {
+    background-color: rgb(0, 0, 65);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+  }
   
 /* Animaciones */
 .header-cursos h2{

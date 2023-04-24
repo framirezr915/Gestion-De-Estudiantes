@@ -64,4 +64,3 @@ onValue(dataRef, (snapshot) => {
     estudiantesTable.appendChild(tr);
   }
 });
-

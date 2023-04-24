@@ -137,7 +137,7 @@ function updateData(){
     
 
 }
-alert('updated')
+alert('Actualizado')
 }
 
 btnActulizar2.addEventListener('click', (e) => {

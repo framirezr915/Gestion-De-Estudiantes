@@ -25,8 +25,8 @@ dbRef.child("Estudiantes").child(sessionStorage.getItem("status")).child("Cursos
 
 
 const storageRef = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+"1.pdf");
-const storageRef2 = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+"2.pdf");
-const storageRef3 = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+"3.pdf");
+const storageRef2 = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+2);
+const storageRef3 = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+3);
 
 
 console.log(storageRef);
