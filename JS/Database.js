@@ -14,15 +14,14 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const db = getDatabase();
  
 function findData(){
     const dbref = ref(db);
 
     var usuario = sessionStorage.getItem("status")
-    for(let i= 1; i<5; i++){
-        get(child(dbref, "Estudiantes/" + (usuario+"/") + "Cursos/"+i))
+    for(let i= 5; i<8; i++){
+        get(child(dbref, "Estudiantes/" + (usuario+"/") +"Cursos/"+ i))
     .then((snapshot)=>{
         if(snapshot.exists()){
 
@@ -40,31 +39,25 @@ document.getElementById(("btnCurso"+i)).innerHTML = (snapshot.val().Nombre);
 
 findData();
 
-btnCurso1.addEventListener ('click', (e) => {
+btnCurso5.addEventListener ('click', (e) => {
     sessionStorage.setItem("Nombre",sessionStorage.getItem("btnCurso1"));
-    sessionStorage.setItem("ID","1");
+    sessionStorage.setItem("ID","5");
     location.replace("../html/Pantalla-Estudiante-Contenido.html")
     
     
 });
 
-btnCurso2.addEventListener ('click', (e) => {
+btnCurso6.addEventListener ('click', (e) => {
     sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso2"));
-    sessionStorage.setItem("ID","2");
+    sessionStorage.setItem("ID","6");
     location.replace("../html/Pantalla-Estudiante-Contenido.html")
     
 });
 
-btnCurso3.addEventListener ('click', (e) => {
+btnCurso7.addEventListener ('click', (e) => {
     sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso3"));
-    sessionStorage.setItem("ID","3");
+    sessionStorage.setItem("ID","7");
     location.replace("../html/Pantalla-Estudiante-Contenido.html")
     
 });
 
-btnCurso4.addEventListener ('click', (e) => {
-    sessionStorage.setItem(("Nombre"),sessionStorage.getItem("btnCurso4"));
-    sessionStorage.setItem("ID","4");
-    location.replace("../html/Pantalla-Estudiante-Contenido.html")
-    
-});

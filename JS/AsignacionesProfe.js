@@ -1,6 +1,3 @@
-
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyD6z7vPeIDhq7MQrV7M6sZOq2rFn_0ys6Q",
     authDomain: "gestion-de-estudiantes.firebaseapp.com",

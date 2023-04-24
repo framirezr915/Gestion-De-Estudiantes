@@ -304,9 +304,7 @@ html{
   .grupos-container {
     border: none;
     display: flex;
-    flex-grow: inherit;
-    width: 700px;
-    flex-direction: row;
+    
   }
 
 li.grupo-item{

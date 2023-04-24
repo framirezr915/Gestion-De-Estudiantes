@@ -9,7 +9,6 @@ const firebaseConfig = {
   };
 
 firebase.initializeApp(firebaseConfig);
-
 const dbRef = firebase.database().ref();
 
 
@@ -23,9 +22,16 @@ dbRef.child("Estudiantes").child(sessionStorage.getItem("status")).child("Cursos
   console.error(error);
 });
 
+
+
 const storageRef = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+"1.pdf");
 const storageRef2 = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+"2.pdf");
 const storageRef3 = firebase.storage().ref(sessionStorage.getItem("status")+"/"+sessionStorage.getItem("ID")+"/"+"3.pdf");
+
+
+console.log(storageRef);
+console.log(storageRef2);
+console.log(storageRef3);
 
 btnDescarga4.addEventListener('click', (e) => {
     console.log("nbu");

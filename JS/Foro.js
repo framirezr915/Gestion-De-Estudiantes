@@ -26,6 +26,7 @@ btnEnviar.addEventListener("click", (e) => {
   const name = document.getElementById('nombre').value;
   const message = document.getElementById('mensaje').value;
   const courseId = sessionStorage.getItem('ID');
+  console.log(courseId)
 
   // Agregar un nuevo mensaje para el curso actual
   const messagesRef = ref(database, 'messages/' + courseId);

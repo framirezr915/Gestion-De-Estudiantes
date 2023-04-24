@@ -1,3 +1,5 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+import { getDatabase, set, ref, push, child, onValue } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 // Configuración de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyD6z7vPeIDhq7MQrV7M6sZOq2rFn_0ys6Q",
@@ -9,67 +11,47 @@ const firebaseConfig = {
     appId: "1:195992130911:web:d883094ec0cd5d115612ea",
     measurementId: "G-MZ74HG8FX8"
   };
-document.getElementById(("Nombre2")).innerHTML = sessionStorage.getItem("Nombre");
-contentBtn.addEventListener ('click', (e) => {
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
-    location.replace("../html/Pantalla-Profesor-Semanas.html")
-    });
+let btnEnviar = document.getElementById('btnEnviar');
+let chatUl = document.getElementById('chatUl');
 
+// Agrega un manejador de eventos para el botón "Enviar"
+btnEnviar.addEventListener("click", (e) => {
+  const name = document.getElementById('nombre').value;
+  const message = document.getElementById('mensaje').value;
+  const courseId = sessionStorage.getItem('ID');
 
-// Inicializamos la aplicación de Firebase
-firebase.initializeApp(firebaseConfig);
+  // Agregar un nuevo mensaje para el curso actual
+  const messagesRef = ref(database, 'messages/' + courseId);
+  const newMessageRef = push(messagesRef);
+  set(newMessageRef, {
+    name: name,
+    message: message,
+    courseId: courseId
+  });
 
-// Referencia a la base de datos de Firebase
-const database = firebase.database();
-
-// Referencia al formulario de comentarios
-const formulario = document.querySelector('form');
-
-// Referencia a la lista de comentarios
-const comentariosUl = document.getElementById('comentarios-ul');
-
-// Función para agregar un comentario a la lista
-function agregarComentario(nombre, mensaje) {
-	const li = document.createElement('li');
-	const strong = document.createElement('strong');
-	strong.textContent = nombre;
-	li.appendChild(strong);
-	const p = document.createElement('p');
-	p.textContent = mensaje;
-	li.appendChild(p);
-	const span = document.createElement('span');
-	span.textContent = new Date().toLocaleString();
-	li.appendChild(span);
-	comentariosUl.appendChild(li);
-}
-
-// Función para cargar los comentarios desde Firebase y actualizarlos en tiempo real
-function cargarComentarios() {
-	database.ref('comentarios').on('value', snapshot => {
-		// Borramos los comentarios anteriores
-		comentariosUl.innerHTML = '';
-		const comentarios = snapshot.val();
-		for (const key in comentarios) {
-			const comentario = comentarios[key];
-			agregarComentario(comentario.nombre, comentario.mensaje);
-		}
-	});
-}
-
-// Cargar los comentarios iniciales
-cargarComentarios();
-
-// Manejador de eventos para el envío del formulario
-formulario.addEventListener('submit', e => {
-	e.preventDefault();
-	const nombre = document.getElementById('nombre').value;
-	const mensaje = document.getElementById('mensaje').value;
-	const comentarioRef = database.ref('comentarios').push();
-	comentarioRef.set({
-		nombre,
-		mensaje
-	});
-	agregarComentario(nombre, mensaje);
-	formulario.reset();
+  document.getElementById('mensaje').value = '';
 });
+
+
+// Función para actualizar la lista de mensajes en el foro
+const actualizarForo = () => {
+  const courseId = sessionStorage.getItem('ID');
+  const messagesRef = ref(database, 'messages/' + courseId);
+
+  // Escuchar cambios en la base de datos en tiempo real
+  onValue(messagesRef, (snapshot) => {
+    chatUl.innerHTML = '';
+    snapshot.forEach((childSnapshot) => {
+      const message = childSnapshot.val();
+      const html = "<li><b>" + message.name + ": </b>" + message.message + "</li>";
+      chatUl.innerHTML += html;
+    });
+  });
+};
+
+// Llamar la función para actualizar la lista de mensajes al cargar la página
+actualizarForo();
 
