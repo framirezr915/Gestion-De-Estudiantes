@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/Pantalla-Estudiante-Contenido.css">
+    <title>Gestion de Estudiantes</title>
+    <script type="module" src=""></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script src="../JS/PantallaContenidoEstudiante.js"></script>
+</head>
+<body>
+    <div class="side-bar">
+        <div class="logo">
+          <img src="../multimedia/logo-white.svg" alt="" class="logo" />
+        </div>
+        <a class="grupos" href="/html/Pantalla-Estudiante-Grupos.html">
+          <img src="../multimedia/grupo.svg" alt="" />
+          <p>Grupos</p>
+        </a>
+
+        <div class="back-btn-container">
+          <a href="/html/Pantalla-Estudiante.html" class="Back-btn">
+            <img src="../multimedia/backarrow.svg" alt="back-arrow" />
+            <p>Regresar</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-cursos">
+        <h2 id="TituloContenido">Nombre de Curso</h2>
+        <hr />
+      </div>
+
+      <div class="header-content">
+        <button class="btn-content" id="content-btn">Contenido</button>
+          <a href="/html/Pantalla-Estudiante-LibroTrab.html">
+            <button class="btn-content" id="Lt-btn">Libro de Trabajos</button>
+          </a>
+          <a href="/html/Reclamos.html">
+            <button class="btn-content" id="Discusiones-btn">Discusiones</button>
+          </a>
+
+      </div>
+
+      <div class="contenido">
+        <h3>Contenido del curso</h3>
+        
+        <hr />
+      </div>
+
+      <table>
+        <tr>
+            <td colspan="2">
+                <h2>Documentos</h2>
+
+            </td>
+            <td>
+            <button id="btnDescarga4" type="button"  >Laboratorio1</button>
+            <button id="btnDescarga5" type="button"  >Laboratorio2</button>
+            <button id="btnDescarga6" type="button"  >Laboratorio3</button>
+            <embed src="" id="image2" width="800px" height="1000px" />
+          </td>
+  </table>
+
+
+
+  
+    
+  
+
+  <script type="module" src=""></script>
+</body>
+</html>
