@@ -28,6 +28,9 @@ signInWithEmailAndPassword(auth, email, password,)
 const user = userCredential.user;
 
 if (email.includes("std")){
+  if(email.includes("juanp")){
+    sessionStorage.setItem("std","1");
+  }
   location.replace("../html/Pantalla-Estudiante.html")
   sessionStorage.setItem("status", email.replace("@std.com",""));
   alert("Ha ingresado correctamente como estudiante.");
